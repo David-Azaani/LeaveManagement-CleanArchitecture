@@ -1,4 +1,5 @@
 ﻿using LeaveManagement.Application.Contracts.Persistence;
+using LeaveManagement.Application.Exceptions;
 using MediatR;
 
 namespace LeaveManagement.Application.Features.LeaveType.Commands.DeleteLeaveType;
