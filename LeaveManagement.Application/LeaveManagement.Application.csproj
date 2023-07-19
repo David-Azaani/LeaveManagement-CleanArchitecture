@@ -24,4 +24,9 @@
     <ProjectReference Include="..\LeaveManagement.Domain\LeaveManagement.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Contracts\Email\" />
+    <Folder Include="Contracts\Logging\" />
+  </ItemGroup>
+
 </Project>
