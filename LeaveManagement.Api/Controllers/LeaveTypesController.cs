@@ -8,8 +8,8 @@ using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-namespace LeaveManagement.Api.Controllers
-{
+namespace LeaveManagement.Api.Controllers;
+
     [Route("api/[controller]")]
     [ApiController]
     public class LeaveTypesController : ControllerBase
@@ -49,6 +49,8 @@ namespace LeaveManagement.Api.Controllers
         {
             var response = await _mediator.Send(leaveType);
             return CreatedAtAction(nameof(Get), new { id = response });
+            
+            
         }
 
         // PUT api/<LeaveTypesController>
@@ -75,5 +77,5 @@ namespace LeaveManagement.Api.Controllers
             return NoContent();
         }
     }
-}
+
 

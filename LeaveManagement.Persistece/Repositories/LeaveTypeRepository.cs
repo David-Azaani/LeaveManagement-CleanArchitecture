@@ -15,8 +15,9 @@ public class LeaveTypeRepository : GenericRepository<LeaveType>, ILeaveTypeRepos
 
     public async Task<bool> IsLeaveTypeUnique(string name)
     {
+        bool res = await _context.LeaveTypes.AnyAsync(q => q.Name == name);
         // the reason of why we used Protected context in gerenric repository!
-        return await _context.LeaveTypes.AnyAsync(q => q.Name == name);
+        return !res;
     }
 }
 
